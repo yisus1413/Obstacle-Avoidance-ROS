@@ -2,7 +2,14 @@
 
 class Avoider():
 	''' This class provides simple obstacle avoidance functionalities to a ROS robot '''
-
+	# Dict that represents the mean of the angles compared to the reference Front C
+	Regions_means = {
+			     "front_C": 0, "front_L": -30, "left_R" : -60,
+	                     "left_C" : -90, "left_L" : -120, "back_R" : -150,
+	                     "back_C" : 180, "back_L" : 150, "right_R": 120,
+	                     "right_C": 90, "right_L": 60, "front_R": 30,
+		
+			}
 	# This dict keeps track of the distance measures for each region
 	Regions_Report = {
 	                     "front_C": [], "front_L": [], "left_R" : [],
